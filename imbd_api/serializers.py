@@ -8,7 +8,7 @@ class watchlistserializer(serializers.ModelSerializer):
         fields = '__all__'
         
 class streamplatformserializer(serializers.ModelSerializer):
-    watch_list = serializers.StringRelatedField(many=True)
+    watch_list = serializers.StringRelatedField(many=True, read_only=True)
     class Meta:
         model = streamplatform
         fields = '__all__'

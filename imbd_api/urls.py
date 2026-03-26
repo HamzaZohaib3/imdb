@@ -7,13 +7,13 @@ from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r"stream", views.streamplatformViewSet, basename="streamplatform")
+router.register(r"watch", views.watchlistViewSet, basename="watchlist")
 
 
 urlpatterns = [
-    path("list/",views.movie_list,name = "movie_list"),
-    path("list/<int:pk>/",views.movie_detail,name = "movie_details"),
+
+    path("",views.api_root), 
     path("", include(router.urls)),
-    path("",views.api_root),
+
     
 ] 
-# urlpatterns = format_suffix_patterns(urlpatterns)

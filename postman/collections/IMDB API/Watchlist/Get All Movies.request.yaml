@@ -1,0 +1,6 @@
+$kind: http-request
+name: Get All Movies
+method: GET
+url: '{{baseUrl}}/list/'
+description: Returns a list of all watchlist items.
+order: 1000

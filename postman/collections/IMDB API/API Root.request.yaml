@@ -1,0 +1,6 @@
+$kind: http-request
+name: API Root
+method: GET
+url: '{{baseUrl}}/'
+description: Returns links to the main API resources (watchlist and streamplatform).
+order: 1000

@@ -1,0 +1,6 @@
+$kind: http-request
+name: Delete Stream Platform
+method: DELETE
+url: '{{baseUrl}}/stream/{{platform_id}}/'
+description: Deletes a streaming platform by ID.
+order: 6000

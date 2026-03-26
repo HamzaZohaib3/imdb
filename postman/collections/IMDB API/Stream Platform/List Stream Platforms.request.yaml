@@ -1,0 +1,6 @@
+$kind: http-request
+name: List Stream Platforms
+method: GET
+url: '{{baseUrl}}/stream/'
+description: Returns a list of all streaming platforms.
+order: 1000

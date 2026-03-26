@@ -6,6 +6,12 @@ class watchlistserializer(serializers.ModelSerializer):
     class Meta:
         model = watchlist
         fields = '__all__'
+        
+class streamplatformserializer(serializers.ModelSerializer):
+    watch_list = serializers.StringRelatedField(many=True)
+    class Meta:
+        model = streamplatform
+        fields = '__all__'
     
 # class watchlistserializer(serializers.Serializer):
     
@@ -29,11 +35,7 @@ class watchlistserializer(serializers.ModelSerializer):
 #         return instance
     
 
-class streamplatformserializer(serializers.ModelSerializer):
-    watch_list = serializers.StringRelatedField(many=True)
-    class Meta:
-        model = streamplatform
-        fields = '__all__'
+
 
 # class streamplatformserializer(serializers.Serializer):
     

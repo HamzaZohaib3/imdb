@@ -16,29 +16,32 @@ from rest_framework import viewsets
 def api_root(request, format=None):
     return Response(
         {
-            "watchlist": reverse("movie_list", request=request, format=format),
-            "streamplatform": reverse("stream_list", request=request, format=format),
+            "watchlist": reverse("watchlist-list", request=request, format=format),
+            "streamplatform": reverse("streamplatform-list", request=request, format=format),
         }
     )
 
+class watchlistViewSet(viewsets.ModelViewSet):
+    queryset = watchlist.objects.all()
+    serializer_class = watchlistserializer
 
-@api_view(["GET"]) 
-def movie_list(request,formate = None):
-    moive_list = watchlist.objects.all()
-    serializer = watchlistserializer(moive_list, many = True)
-    return Response(serializer.data)
 
-@api_view(["GET"])
-def movie_detail(request,pk,formate = None):
-    moive = watchlist.objects.get(pk=pk)
-    serializer = watchlistserializer(moive)
-    return Response(serializer.data)
 
 class streamplatformViewSet(viewsets.ModelViewSet):
     queryset = streamplatform.objects.all()
     serializer_class = streamplatformserializer
     
+# @api_view(["GET"]) 
+# def movie_list(request,formate = None):
+#     moive_list = watchlist.objects.all()
+#     serializer = watchlistserializer(moive_list, many = True)
+#     return Response(serializer.data)
 
+# @api_view(["GET"])
+# def movie_detail(request,pk,formate = None):
+#     moive = watchlist.objects.get(pk=pk)
+#     serializer = watchlistserializer(moive)
+#     return Response(serializer.data)
 
 # class stream_list(generics.ListCreateAPIView):
 #     queryset = streamplatform.objects.all()

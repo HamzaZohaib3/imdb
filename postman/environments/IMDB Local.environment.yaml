@@ -1,0 +1,14 @@
+name: IMDB Local
+values:
+  - key: baseUrl
+    value: 'http://127.0.0.1:8000'
+    enabled: true
+    type: default
+  - key: movie_id
+    value: '1'
+    enabled: true
+    type: default
+  - key: platform_id
+    value: '1'
+    enabled: true
+    type: default

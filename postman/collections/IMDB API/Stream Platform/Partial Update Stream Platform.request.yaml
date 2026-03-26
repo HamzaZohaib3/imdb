@@ -1,0 +1,15 @@
+$kind: http-request
+name: Partial Update Stream Platform
+method: PATCH
+url: '{{baseUrl}}/stream/{{platform_id}}/'
+description: Partially updates a streaming platform by ID.
+order: 5000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "about": "Partially updated description"
+    }

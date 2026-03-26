@@ -1,0 +1,6 @@
+$kind: http-request
+name: Get Movie Detail
+method: GET
+url: '{{baseUrl}}/list/{{movie_id}}/'
+description: Returns details of a specific watchlist item by ID.
+order: 2000

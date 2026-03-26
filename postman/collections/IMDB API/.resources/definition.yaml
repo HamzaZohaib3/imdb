@@ -1,0 +1,6 @@
+$kind: collection
+name: IMDB API
+description: Collection for an IMDB-like Django REST Framework API. Covers the API root, watchlist items, and streaming platform CRUD operations.
+variables:
+  - key: baseUrl
+    value: 'http://127.0.0.1:8000'

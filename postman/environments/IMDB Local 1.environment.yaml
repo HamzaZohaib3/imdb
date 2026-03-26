@@ -1,0 +1,11 @@
+name: IMDB Local
+values:
+  - key: baseUrl
+    value: ''
+    enabled: true
+  - key: movie_id
+    value: ''
+    enabled: true
+  - key: platform_id
+    value: ''
+    enabled: true

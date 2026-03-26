@@ -1,0 +1,17 @@
+$kind: http-request
+name: Update Stream Platform
+method: PUT
+url: '{{baseUrl}}/stream/{{platform_id}}/'
+description: Fully updates a streaming platform by ID.
+order: 4000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "Netflix",
+      "about": "Updated description",
+      "website": "https://www.netflix.com"
+    }

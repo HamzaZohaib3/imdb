@@ -15,5 +15,4 @@ urlpatterns = [
     path("",views.api_root), 
     path("", include(router.urls)),
 
-    
 ] 
